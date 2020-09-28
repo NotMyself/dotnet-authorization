@@ -34,7 +34,6 @@ namespace web
         .AddOpenIdConnect("Auth0", o =>
         {
           o.SaveTokens = true;
-          o.GetClaimsFromUserInfoEndpoint = true;
           o.ClientId = Configuration["Auth0:ClientId"];
           o.ClientSecret = Configuration["Auth0:ClientSecret"];
           o.CallbackPath = new PathString("/callback");
